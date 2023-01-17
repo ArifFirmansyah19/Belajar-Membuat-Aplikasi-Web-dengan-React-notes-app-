@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #eaeaea;
+    /* color: white; */
+}
+
+.bar {
+    width: 100%;
+    max-height: 300px;
+    background-color: rgb(170, 170, 170);
+}
+
+header h1 {
+    width: 100%;
+    color: rgb(59, 54, 54);
+    padding: 25px;
+    font-size: 30px;
+    font-family: monospace;
+    opacity: 0.8;
+}
+
+h3 {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.note-input_table {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.note-input_table h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.note-input {
+    border: 1px dashed black;
+    padding: 20px;
+    margin: 14px 0;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.note-input input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.note-input button {
+    width: 100%;
+    background-color: rgb(209, 66, 66);
+    padding: 8px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border-radius: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+}
+
+.note-list {
+    width: 100%;
+    padding: 20px;
+}
+
+.note-item {
+    display: block;
+    float: left;
+    min-height: 320px;
+    max-height: fit-content;
+    width: 23%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.note-item_createdAt {
+    padding-right: 10px;
+}
+
+.note-item h3 {
+    text-align: center;
+}
+
+.note-body .note-item_createdAt .note-item_title {
+    display: block;
+}
+
+.note-body {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.note-item_body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    margin: 5px 0px;
+    line-height: 1.5em;
+}
+
+.note-item_title {
+    font-size: 22px;
+    padding: 7px;
+    margin: 4px 0px;
+    color: rgb(102, 67, 21);
+}
+
+.note-item_createdAt {
+    font-size: 14px;
+    margin: 4px 0px;
+}
+
+.note-list h3 {
+    text-align: center;
+}
+
+.character-limit p {
+    text-align: center;
+}
+
+.note-item_delete {
+    background-color: rgb(209, 66, 66);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 30%;
+    border: hidden;
+}
+
+.empty-page p {
+    text-align: center;
+    margin-left: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+    .notes-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .notes-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .note-search input {
+        min-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .notes-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
